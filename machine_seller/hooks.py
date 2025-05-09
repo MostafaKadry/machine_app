@@ -148,23 +148,28 @@ app_license = "mit"
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"machine_seller.tasks.all"
-# 	],
-# 	"daily": [
-# 		"machine_seller.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"machine_seller.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"machine_seller.tasks.weekly"
-# 	],
-# 	"monthly": [
-# 		"machine_seller.tasks.monthly"
-# 	],
-# }
+scheduler_events = {
+	# "all": [
+	# 	"machine_seller.tasks.all"
+	# ],
+	# "daily": [
+	# 	"machine_seller.tasks.daily"
+	# ],
+	# "hourly": [
+	# 	"machine_seller.tasks.hourly"
+	# ],
+	# "weekly": [
+	# 	"machine_seller.tasks.weekly"
+	# ],
+	# "monthly": [
+	# 	"machine_seller.tasks.monthly"
+	# ],
+    "cron": {
+        "*/5 * * * *": [
+            "machine_seller.tasks.mark_machines_as_sold"
+        ]
+    }
+}
 
 # Testing
 # -------

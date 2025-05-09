@@ -1,0 +1,81 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-05-08 19:03:55.298335",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "machine_name",
+  "selling_status",
+  "column_break_dlig",
+  "type",
+  "section_break_brpz",
+  "spare_parts"
+ ],
+ "fields": [
+  {
+   "fieldname": "machine_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Machine Name",
+   "reqd": 1
+  },
+  {
+   "default": "unsold",
+   "fieldname": "selling_status",
+   "fieldtype": "Select",
+   "label": "Selling Status",
+   "options": "unsold\nsold",
+   "reqd": 1
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Link",
+   "label": "Type",
+   "options": "Machine Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_dlig",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_brpz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "spare_parts",
+   "fieldtype": "Table",
+   "label": "Spare Parts",
+   "options": "Machine Spare Part"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-05-09 03:34:22.382847",
+ "modified_by": "Administrator",
+ "module": "Machine Seller",
+ "name": "Machine",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "machine_name"
+}
